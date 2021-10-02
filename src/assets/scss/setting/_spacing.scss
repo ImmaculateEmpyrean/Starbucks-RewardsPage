@@ -1,14 +1,14 @@
 @use '_breakpoints.scss' as *;
-*{
+:root{
     --spacing-small: 0.8rem;
     --spacing-normal: 1.6rem;
     --spacing-large: 3.2rem;
 }
 
 @include for-tablet-portrait-up{
-    *{
+    :root{
         --spacing-small: 0.8rem;
-        --spacing-normal: 1.6rem;
-        --spacing-large: 3.2rem;
+        --spacing-normal: 2.4rem;
+        --spacing-large: 4rem;
     } 
 }

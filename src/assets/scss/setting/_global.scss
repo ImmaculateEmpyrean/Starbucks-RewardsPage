@@ -1,0 +1,10 @@
+@use './spacing' as *;
+
+.wrapper-center{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left : var(--spacing-normal);
+    padding-right: var(--spacing-normal);
+}

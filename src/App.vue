@@ -1,10 +1,17 @@
 <template>
-<img src="./assets/img/logo.svg" alt="">
+<div class="wrapper-center">
+    <NavBar />
+</div>
 </template>
 
 <script>
+import NavBar from '@/components/NavBar.vue';
+
 export default {
   name: 'App',
+  components:{
+      NavBar
+  }
 }
 </script>
 
