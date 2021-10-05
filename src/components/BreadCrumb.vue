@@ -9,7 +9,6 @@ export default {
     name:"BreadCrumb",
     mounted(){
         alignToInnerGrid();
-        window.addEventListener("resize",alignToInnerGrid);
     }
 }
 </script>
@@ -21,6 +20,7 @@ export default {
     background-color: map-get($theme,"dark");
     color: map-get($whites,"light");
     height: 50px;
+    overflow-x: hidden;
 
     display: flex;
     flex-direction: column;

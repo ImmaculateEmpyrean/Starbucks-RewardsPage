@@ -7,7 +7,7 @@
             <li>
                 <a href="#">
                     <img :src="require('../assets/img/logo.svg')" alt="starbucks-logo" width="51" height="51"
-                    id="starbucks-logo-main"
+                    id="starbucks-logo-main" class="outer-grid-start"
                     >
                 </a>
             </li>
