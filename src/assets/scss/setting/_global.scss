@@ -1,4 +1,5 @@
 @use './spacing' as *;
+@use './color' as *;
 
 .wrapper-center{
     max-width: 1440px;
@@ -7,4 +8,14 @@
 
     padding-left : var(--spacing-normal);
     padding-right: var(--spacing-normal);
+}
+
+.white{
+    color: #000;
+    background: #fff;
+}
+
+.black{
+    color: #fff;
+    background: #000;
 }

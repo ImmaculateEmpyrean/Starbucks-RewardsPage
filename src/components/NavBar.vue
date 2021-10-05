@@ -12,17 +12,17 @@
                 </a>
             </li>
             <li>
-                <a href="#" :v-if="!isPhone" class="menu-button">
-                    <span class="menu-button-text to-uppercase">menu</span>
+                <a href="#" class="menu-button">
+                    <span class="menu-button-text to-uppercase inner-grid-start">menu</span>
                 </a>
             </li>
             <li>
-                <a href="#" :v-if="!isPhone" class="menu-button">
+                <a href="#" class="menu-button">
                     <span class="menu-button-text to-uppercase">rewards</span>
                 </a>
             </li>
             <li>
-                <a href="#" :v-if="!isPhone" class="menu-button">
+                <a href="#" class="menu-button">
                     <span class="menu-button-text to-uppercase">gift cards</span>
                 </a>
             </li>
@@ -30,35 +30,33 @@
         <!-- ended left portion of the navigation -->
         
         <!-- start right portion of the navigation -->
-        <div class="right">
-            <a href="">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Find a store</span>
+        <ul class="right">
+            <li>
+                <a href="">
+                    <i class="fas fa-map-marker-alt menu-button-text" style="margin-right:var(--spacing-small)"></i>
+                    <span class="menu-button-text alternate">Find a store</span>
+                </a>
+            </li>
+            
+            <a href="#" class="cylinder-button white">
+                <span class="menu-button-text alternate">Sign in</span>
             </a>
-            <a href="#" class="cylinder-button white">Sign in</a>
-            <a href="#" class="cylinder-button black">Join now</a>
-        </div>
+            <a href="#" class="cylinder-button black">
+                <span class="menu-button-text alternate">Join Now</span>
+            </a>
+        </ul>
         <!-- ended right portion of the navigation -->
 
     </nav>
 
-    <div class="bottom">
-        <h3>STARBUCKS® REWARDS</h3>
-    </div>
+    
 
 </header>
 </template>
 
 <script>
-import breakpoints from '@/js/scssBreakpoints.js';
-
 export default {
-    name:"NavBar",
-    computed:{
-        isPhone(){
-            return window.innerWidth < parseInt(breakpoints.forTabletPortraitUp.breakpoint);
-        }
-    }
+    name:"NavBar"
 }
 </script>
 
@@ -72,6 +70,12 @@ export default {
 
 .left{
     display: flex;
+
+    align-items: center;
+    gap: var(--spacing-normal);
+}
+.right{
+    display: flex;
     position: relative;
 
     align-items: center;
@@ -84,12 +88,18 @@ export default {
     flex-direction: column;
     justify-content: center;
 
-    padding-top: var(--spacing-large);
-    padding-bottom: var(--spacing-large);
+    padding-top: var(--spacing-normal);
+    padding-bottom: var(--spacing-normal);
 }
 
 
 #starbucks-logo-main{
     margin-right: var(--spacing-normal);
+}
+
+.cylinder-button{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: var(--spacing-small) var(--spacing-normal);
 }
 </style>
